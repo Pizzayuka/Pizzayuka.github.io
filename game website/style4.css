@@ -1,0 +1,124 @@
+body{
+    background-color: black;
+}
+
+html, body {
+    height: 100%;
+}
+
+#ants{
+    height: 10in;
+    width: auto;
+}
+
+.pixel-art{
+    image-rendering: pixelated;
+}
+
+.marquee{
+    height: 900px;
+    width: 100%;
+    position: fixed;
+    background-image: url(hand.png) ;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position-x: 50%;
+    image-rendering: pixelated;
+    display:none;
+}
+
+.marquee div{
+    position: fixed;
+    width: 100%;
+    left: 100%;
+}
+
+.marquee .marquee-one{
+    animation: marquee 10s linear 0s infinite;
+}
+
+.marquee .marquee-two{
+    animation: marquee 10s linear 0s infinite;
+}
+
+.marquee .marquee-three{
+    animation: marqueeee 10s linear 0s infinite;
+}
+
+.marquee .marquee-four{
+    animation: marqueeee 10s linear 0s infinite;
+}
+
+
+@keyframes marquee{
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+@keyframes marqueeee{
+    0% { left: 0%; }
+    50%{ left: -100%; }
+    100% { left: 50%; }
+}
+
+@font-face { font-family: manaspace; src: url('manaspc.ttf'); }
+
+.toptext{
+    font-family: manaspace;
+    color: ghostwhite;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    margin: 10px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    left: 500px;
+}
+
+
+
+.subtext{
+    font-family: manaspace;
+    color: ghostwhite;
+    text-align: center;
+    display: none;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+}
+
+.subtext a{
+    color: ghostwhite;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.subtext a:hover{
+    background-color: orange;
+}
+
+.dropdown:hover .subtext {
+    display: block;
+    background-color: black;
+}
+
+
+
+.translation{
+    font-family: manaspace;
+    font-size: 70px;
+    color: rgba(176, 209, 253);
+    text-align: center;
+    left: 100px;
+    position: fixed ;
+    margin: 20px;
+    display: none;
+    bottom: 0%;
+    z-index: 9999;
+}

@@ -1,0 +1,57 @@
+
+
+body{
+    background-color: black;
+}
+
+html{
+    cursor: url('hand-cursor.png'), pointer;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    background-image:url(circle.png) ;
+    background-repeat: no-repeat;    
+    background-size: cover;
+    position: absolute;
+    display: block;
+    image-rendering: pixelated;
+}
+
+#circleOne{
+    margin: 50px;   
+    left: 100px;
+    top: 100px;
+}
+
+#circleTwo{
+    margin: 100px;   
+    left: 400px;
+    top: 100px;
+}
+
+#circleThree{
+    margin: 50px;   
+    left: 700px;
+    top: 100px;
+}
+
+#circleFour{
+    margin: 100px;   
+    left: 1000px;
+    top: 100px;
+}
+
+#circleFive{
+    margin: 150px;   
+    left: 200px;
+    top: 200px;
+}
+#circleSix{
+    margin: 200px;   
+    left: 400px;
+    top: 300px;
+}
+
+

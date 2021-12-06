@@ -1,0 +1,226 @@
+:root {
+    --pixel-size: 2px;
+    --grid-cell: calc( var(--pixel-size) * 16);
+    --bg: #000000;
+}
+
+@media( min-width: 700px ) {
+    :root {
+       --pixel-size: 3px;
+    }
+}
+
+@media( min-width: 1000px ) {
+    :root {
+       --pixel-size: 4px;
+    }
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floor {
+    position: fixed;
+    bottom: 0;
+    min-width: 160%;
+    min-height: 160%;
+    z-index: -1;
+}
+
+
+.pixel-art {
+    image-rendering: pixelated;
+}
+
+.map{
+    width: calc( var(--grid-cell)*13);
+    height: calc( var(--grid-cell)*8);
+    background-image: url(room-dark.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: left ;
+    background-position-y: -100px ;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+}
+
+.map{
+    width: calc( var(--grid-cell)*13);
+    height: calc( var(--grid-cell)*8);
+    background-image: url(room-dark.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: left ;
+    background-position-y: -100px ;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+}
+
+.character {
+    width: calc( var(--grid-cell)* 2 );
+    height: calc( var(--grid-cell)* 2 );
+    position: absolute;
+    overflow: hidden;
+}
+
+.character_spritesheet {
+    position: absolute;
+    background: url("character-dark.png") no-repeat no-repeat;
+    background-size: 100%;
+    width: calc( var(--grid-cell)* 8 );
+    height: calc( var(--grid-cell)* 8 );
+}
+
+
+.character[facing="right"] .character_spritesheet {
+    background-position-y: calc( var(--pixel-size) * -64 );
+}
+.character[facing="up"] .character_spritesheet {
+    background-position-y: calc( var(--pixel-size) * -32 );
+}
+.character[facing="left"] .character_spritesheet {
+    background-position-y: calc( var(--pixel-size) * -96 );
+}
+.character[walking="true"] .character_spritesheet {
+    animation: walkAnimation 1s steps(4) infinite;
+}
+
+@keyframes walkAnimation {
+   from {
+     transform: translate3d(0%,0%,0);
+   }
+   to {
+     transform: translate3d(-100%,0%,0);
+   }
+}
+
+#sofa{
+    width: 250px;
+    left: 470px;
+    top: 30px;
+    position: fixed;
+}
+
+#painting{
+    width: 250px;
+    position: fixed;
+    top: 110px;
+    left: 330px;
+}
+
+@font-face { font-family: manaspace; src: url('manaspc.ttf'); }
+
+.text{
+    position: relative;
+    left: 98%;
+    top: 12%;
+    font-family: manaspace;
+    color: ghostwhite;
+    overflow: hidden;
+    width: 0;
+    height: 15px;
+    animation: typing 6s steps(15, end), step-end infinite;
+    animation-delay: 3s;
+}
+
+.text2{
+    position: relative;
+    left: 98%;
+    top: 12%;
+    font-family: manaspace;
+    color: ghostwhite;
+    overflow: hidden;
+    width: 0;
+    height: 15px;
+    animation: typing 5s steps(15, end), step-end infinite;
+    animation-delay: 8s;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+.text4{
+    position: absolute;
+    left: 98%;
+    top: 10%;
+    font-family: manaspace;
+    font-size: 70px;
+    color: rgba(176, 209, 253, 0.548);
+    overflow: hidden;
+    opacity: 0;
+    animation: blink 3s  ;
+    animation-delay: 5s;
+}
+
+.text5{
+    position: absolute;
+    left: 98%;
+    top: 10%;
+    font-family: manaspace;
+    font-size: 70px;
+    color: rgba(176, 209, 253, 0.548);
+    overflow: hidden;
+    opacity: 0;
+    animation: blink 3s  ;
+    animation-delay: 10s;
+}
+
+
+
+@keyframes blink {
+    from { opacity: 0 }
+    to { opacity: 30 }
+}
+
+
+.messege{
+    font-family: manaspace;
+    color: ghostwhite;
+    position: absolute;
+    left: 98%;
+    top: 30%;
+    width: 200px;
+    display: none;
+}
+
+
+#yes:hover{
+    background-color: orange;
+}
+
+#no:hover{
+    background-color: orange;
+}
+
+a:link{
+    color:ghostwhite ;
+    text-decoration: none;
+}
+
+a:visited {
+    color: ghostwhite;
+}
+  
+.question{
+    font-family: manaspace;
+    color: ghostwhite;
+    position: absolute;
+    left: 98%;
+    top: 50%;
+    width: 200px;
+    display: none;
+}

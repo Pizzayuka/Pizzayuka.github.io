@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>his end and his beginning</title>
+    <link rel="icon" href="character-icon.png">
+
+    <style>
+        @font-face { font-family: manaspace; src: url('manaspc.ttf'); }
+
+        body{
+            background-color: white;
+            background-image: url(sky.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            image-rendering: pixelated;
+        }
+
+        html, body {
+            height: 100%;
+        }
+        
+
+        .text{
+            font-family: manaspace;
+            text-align: center;
+            position: absolute;
+            display: block;
+            width: 100%;
+        }
+
+        #spanish{
+            color: black; 
+            font-size: 30px;    
+            top: 50%;
+
+        }
+        #spanish:hover + #english{
+            display: block;
+        }
+
+        #english{
+            color: rgba(176, 209, 253);
+            font-size: 70px;
+            margin: 20px;
+            top: 52%;
+            display: none;
+            opacity: 0;
+            animation: blink 3s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes blink {
+            from { opacity: 0 }
+            to { opacity: 100 }
+        }
+
+        .navigation{
+            position: relative;
+            left: 40%;
+            top: 10px;
+            font-family: manaspace;
+            color: ghostwhite;
+            overflow: hidden;
+            width: 0;
+            height: 18px;
+            animation: typing 3.5s steps(40, end), step-end infinite ;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+        }
+        
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        a:link{
+            color:ghostwhite ;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: ghostwhite;
+        }
+
+        a:hover{
+            background-color: orange;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    
+
+    <div class="navigation">
+        <a href="game.html">go back to the end</a>
+    </div>
+    <div class="text" id="spanish">el elogio de sombra</div>
+    <div class="text" id="english">his end and his beginning</div>
+    
+</body>
+</html>
