@@ -1,12 +1,202 @@
-body{
-    margin:10vw;
+@font-face {
+    font-family: giga;
+    src: url(assets/Giga.otf);
 }
+@font-face {
+    font-family: applegaramond-light;
+    src: url(assets/AppleGaramond-Light.ttf);
+}
+body{
+    margin:1vw;
+    background-image: url(http://scri8e.com/stars/bgs/GA_NO_DIRECT_LINKING/4whyt2.gif);
+    color: white;  
+    font-family:applegaramond-light ;
+    text-transform: uppercase;
+}
+
 a{
     text-decoration: none;
-    font-size: 20px;
-    color:blue;
+    font-size: 50px;
+    color:white;
+    margin: 0px;
+}
+
+model-viewer {
+    width: 40vw;
+    height: 80vh;
+    border:none;
 }
 
 .grid{
+    display: grid;
+    border: 1px solid white;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    overflow: hidden;
+}
+
+.icon{
+    border: 1px solid white;
+    border-top:none;
+    border-bottom:none;
+    border-right:none;
+    width: 40vw;
+    overflow: hidden ;
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.homeworks{
+    display: flex; 
+    flex-direction: row;
+    border: 1px solid white;
+    border-top:none;
+    border-bottom:none;
+    border-right:none;
+    grid-column: 2/3;
+    grid-row: 1;
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 30vw;
+    height: 80vh;
+    place-items: center;
+}
+
+.homeworks a{
+    margin: 100px;
+}
+
+.discription{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 30vw;
+    height: 80vh;
+    border: 1px solid white;
+    border-bottom: none;
+    border-top: none;
+}
+
+.title{
+    border: 1px solid white;
+    width: 40vw;
+    height: 10vh;
+    grid-column: 1/2;
+    grid-row: 2;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-bottom:none;
+    border-right:none;
+}
+
+.studio{
+    border: 1px solid white;
+    border-bottom:none;
+    border-right:none;
+    width: 30vw;
+    height: 10vh;
+    grid-column: 2/3;
+    grid-row: 2;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.studio:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+.studio a{
+    font-size: 1rem;
+    place-items: center;
+    margin: 0;     
+}
+
+
+
+.classmates{
+    height: auto;
+    border: 1px solid white;
+    border-bottom:none;
+    width: 30vw;
+    grid-column: 3;
+    grid-row: 2;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    font-family: applegaramond-light;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border: none;
+    height: 10vh;
+}
+
+.dropup-content {
+    border: 1px solid white;
+    background-color: black;
+    display: none;
+    position: absolute;
+    margin: 0;
+    right: 10px;
+    bottom: 60px;
+    z-index: 1;
+    width: 30vw;
+    height: 80vh;
+}
+  
+
+.dropup-content a {
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: giga;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropup-content a:hover {background-color: rgba(124, 181, 255, 0.5)}
+  
+.classmates:hover .dropup-content {
+    display: block;
+}
+  
+.profile-img{
+    grid-row: 3;
+    grid-column: 1/3;
+    background-image: url(../Pizzayuka.github.io/assets/yuka-01.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin-left: 20%; 
+}
+
+#profile{
+    grid-row: 2/4;
+    grid-column: 1/3;
+    margin-top: 50px;
     
+}
+
+.email{
+    grid-row: 4/5;
+    grid-column: 1/2;
+    margin-left: auto;
+
+}
+
+.insta{
+    grid-row: 4/5;
+    grid-column: 2/3;
+    margin-right: auto;
+}
+
+.hit-counter{
+    grid-row: 5/6;
+    grid-column: 1/3;
 }
