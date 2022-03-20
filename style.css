@@ -69,6 +69,10 @@ model-viewer {
     margin: 100px;
 }
 
+.homeworks a:hover{
+    color: rgba(124, 181, 255);
+}
+
 .discription{
     display: grid;
     grid-template-columns: repeat(2,1fr);
