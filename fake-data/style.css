@@ -1,0 +1,23 @@
+html {
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+  
+  body {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+  }
+  
+  h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.25rem;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  
