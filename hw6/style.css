@@ -1,0 +1,36 @@
+body {
+  height: 2000vh;
+}
+
+main {
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+div {
+  padding: 1rem;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+div:nth-child(1) {
+  background: red;
+}
+
+div:nth-child(2) {
+  background: hotpink;
+}
+
+div:nth-child(3) {
+  background: pink;
+}
+
+div:nth-child(4) {
+  background: salmon;
+}
+
+div:nth-child(5) {
+  background: coral;
+}
